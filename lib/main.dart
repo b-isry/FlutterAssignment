@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:noteapp/student.dart';
@@ -92,14 +94,14 @@ class _MyNoteAppState extends State<MyNoteApp> {
                 Student student = students[index];
                 return ListTile(
                   contentPadding: const EdgeInsets.all(10.0),
-                  // leading: ClipOval(
-                  //   child: Image.file(
-                  //     File(student.photo),
-                  //     width: 50,
-                  //     height: 50,
-                  //     fit: BoxFit.cover,
-                  //   ),
-                  // ),
+                  leading: ClipOval(
+                    child: Image.file(
+                      File(student.photo),
+                      width: 50,
+                      height: 50,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                   title: Text(
                     student.studentName,
                     style: const TextStyle(
